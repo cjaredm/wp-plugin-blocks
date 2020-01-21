@@ -1,0 +1,96 @@
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
+//--------------------------------------------------------------
+// Shared Front-Back Styles
+//--------------------------------------------------------------
+.mini-hero-gallery__render,
+.mini-hero-gallery__editor {
+  .mini-hero-gallery__text {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: rem-calc(75);
+    text-transform: uppercase;
+    text-align: center;
+    word-break: break-word;
+    padding: 40px;
+    color: $color-white;
+    height: inherit;
+    overflow: hidden;
+    line-height: 1;
+  }
+}
+
+//--------------------------------------------------------------
+// Mini-Hero-Gallery
+//--------------------------------------------------------------
+.mini-hero-gallery__render {
+  left: 50%;
+	margin-left: -50vw;
+	margin-right: -50vw;
+	position: relative;
+	right: 50%;
+  width: 100vw;
+  
+  padding-top: 20px;
+}
+
+.mini-hero-gallery {
+  padding: 20px 0 0 0;
+
+  &__heading {
+    text-align: center;
+    margin: 0 auto 20px !important;
+    font-size: rem-calc(40) !important;
+  }
+
+  &__container,
+  .editor-rich-text.block-editor-rich-text {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    @media (min-width: 768px) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__mini-hero {
+    position: relative;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+
+    @media (min-width: 768px) {
+      margin: 0 20px 20px;
+      height: 450px;
+      width: 450px;
+    }
+  }
+
+  &__img {
+    height: inherit !important;
+    width: inherit !important;
+  }
+
+  &__text-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  //&__text {
+    // TODO: Design color selector that allows using colors primary, secondary, tertiary, from theme
+  //}
+
+}
+
