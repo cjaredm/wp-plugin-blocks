@@ -10,7 +10,7 @@
  * CSS for just Backend enqueued after style.scss
  * which makes it higher in priority.
  */
-.wp-admin .wp-block[data-type="inetz/mini-hero-gallery"] {
+.wp-admin .wp-block[data-type="jm-rblock/mini-hero-gallery"] {
   max-width: inherit; }
 
 .wp-admin .mini-hero-gallery__editor h2 {

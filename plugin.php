@@ -1,8 +1,8 @@
 <?php
 /**
- * Plugin Name: mini-hero-gallery
+ * Plugin Name: JM - React Blocks
  * Plugin URI: https://github.com/ahmadawais/create-guten-block/
- * Description: mini-hero-gallery.
+ * Description: Wordpress page building block suite created in React.
  * Author: Jared Mortenson
  * Author URI: https://inetz.com/
  * Version: 1.0.0

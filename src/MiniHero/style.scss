@@ -15,7 +15,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: rem-calc(75);
+    font-size: rem-calc(50);
     text-transform: uppercase;
     text-align: center;
     word-break: break-word;
@@ -24,6 +24,10 @@
     height: inherit;
     overflow: hidden;
     line-height: 1;
+
+    strong {
+      font-size: 100px;
+    }
   }
 }
 

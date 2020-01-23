@@ -19,7 +19,7 @@ import './style.scss';
  * @return {?WPBlock}          The block, if it has been successfully
  *                             registered; otherwise `undefined`.
  */
-registerBlockType( 'inetz/mini-hero-gallery', {
+registerBlockType( 'jm-rblock/mini-hero-gallery', {
 	// Block name. Block names must be string that contains a namespace prefix. Example: my-plugin/my-custom-block.
 	title: __('mini-hero-gallery'), // Block title.
 	icon: 'admin-settings', // Block icon from Dashicons → https://developer.wordpress.org/resource/dashicons/.

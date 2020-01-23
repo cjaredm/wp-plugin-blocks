@@ -75,7 +75,7 @@ function mini_hero_gallery_assets() { // phpcs:ignore
 	 * @since 1.16.0
 	 */
 	register_block_type(
-		'inetz/mini-hero-gallery', array(
+		'jm-rblock/mini-hero-gallery', array(
 			// Enqueue blocks.style.build.css on both frontend & backend.
 			'style'         => 'mini_hero_gallery-style-css',
 			// Enqueue blocks.build.js in the editor only.
