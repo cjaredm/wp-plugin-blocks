@@ -10,7 +10,7 @@ import './editor.scss';
 import './style.scss';
 
 // Block Name MUST = 'name-space/blockName'
-registerBlockType(`inetz/${blockName}`, {
+registerBlockType(`${process.env.NAME_SPACE}/${blockName}`, {
   title: __(blockName),
   icon: 'admin-settings',
   category: 'common',
@@ -24,14 +24,14 @@ registerBlockType(`inetz/${blockName}`, {
     <Edit
       {...props}
       id={`${blockName}__editor`}
-      className={`${props.className} inetz-theme-styles-entry`}
+      className={`${props.className} ${process.env.NAME_SPACE}-theme-styles-entry`}
     />
   ),
   save: props => (
     <Save
       {...props}
       id={`${blockName}__render`}
-      className={`${props.className} inetz-theme-styles-entry`}
+      className={`${props.className} ${process.env.NAME_SPACE}-theme-styles-entry`}
     />
   ),
 });
