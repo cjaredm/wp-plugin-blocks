@@ -1,42 +1,59 @@
-const React = wp.element;
-import {MyMediaUploader} from '../components/MyMediaUploader';
+// const React = wp.element;
+import {MediaPlaceholder} from '@wordpress/block-editor';
 import {EditorImgWrapper, REORDER} from './EditorImgWrapper';
 import {InlineEditor} from '../components/InlineEditor';
+import Inspector from './Inspector';
 
-export function EditMiniHero({attributes: {images, header}, setAttributes, className, isSelected}) {
-  const onHeaderChange = (header) => setAttributes({header});
-  const onImgSelect = (img) => setAttributes(
-    {images: [
-      ...images,
-      {id: img.id, src: img.sizes.medium.url, title: img.description, href: ''},
-    ]}
-  );
-  const onImgPropChange = (i) => (prop) => (value) => {
+export default function(props) {
+  const {
+    attributes: {images, header},
+    setAttributes,
+    className,
+    isSelected,
+    id,
+  } = props;
+  const onHeaderChange = header => setAttributes({header});
+  const onImgSelect = img =>
+    setAttributes({
+      images: [
+        ...images,
+        {
+          id: img.id,
+          src: img.sizes.medium.url,
+          title: img.description,
+          href: '',
+        },
+      ],
+    });
+  const onImgPropChange = i => prop => value => {
     const currentImgs = [...images];
     currentImgs[i][prop] = value;
     setAttributes({[prop]: currentImgs});
-  }
-  const onDelete = (i) => () => {
+  };
+  const onDelete = i => () => {
     const imgs = [...images];
     imgs.splice(i, 1);
     setAttributes({images: imgs});
   };
-  const onOrderChange = (from) => (direction) => {
-    const moveTo = direction === REORDER.LEFT ? from - 1 : from + 1
+  const onOrderChange = from => direction => {
+    const moveTo = direction === REORDER.LEFT ? from - 1 : from + 1;
     const reorderedImages = [...images];
     reorderedImages[moveTo] = images[from];
     reorderedImages[from] = images[moveTo];
     setAttributes({images: reorderedImages});
   };
 
-	return (
-    <div className={`${className} mini-hero-gallery__editor`}>
+  return (
+    <div id={id} className={className}>
+      <Inspector
+        {...props}
+        onImgSelect={onImgSelect}
+        onImgPropChange={onImgPropChange}
+        onDelete={onDelete}
+        onOrderChange={onOrderChange}
+      />
       {/* This is our toolbar under the wp-toolbar, add buttons and whatnot here */}
-      {isSelected && (
-        <MyMediaUploader onSelect={onImgSelect} >
-          {images.length ? 'Add Another Image' : 'Add Mini Hero'}
-        </MyMediaUploader>
-      )}
+      {isSelected && <MediaPlaceholder onSelect={onImgSelect} />}
 
       {/* This is where we mimic what is rendered while making it editable */}
       <div className="mini-hero-gallery">
@@ -46,8 +63,8 @@ export function EditMiniHero({attributes: {images, header}, setAttributes, class
           value={header}
           onChange={onHeaderChange}
         />
-				<div className="mini-hero-gallery__container custom-mini-heroes">
-					{images.map((img, i) => (
+        <div className="mini-hero-gallery__container custom-mini-heroes">
+          {images.map((img, i) => (
             <EditorImgWrapper
               key={img.id}
               img={{...img, position: i, length: images.length}}
@@ -56,9 +73,9 @@ export function EditMiniHero({attributes: {images, header}, setAttributes, class
               onOrderChange={onOrderChange(i)}
               isSelected={isSelected}
             />
-					))}
-				</div>
+          ))}
+        </div>
       </div>
     </div>
-	);
+  );
 }

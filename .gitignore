@@ -1,4 +1,8 @@
+## Allow everyone to use npm or yarn
+yarn.lock
+package-lock.json
 node_modules
+src/.DS_Store
 
 ## Uncomment line below if you prefer to
 ## keep compiled files out of version control

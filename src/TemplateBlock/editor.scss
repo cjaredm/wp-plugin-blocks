@@ -1,0 +1,13 @@
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+
+ .wp-admin {
+  // change BLOCK_NAME to the actual block name
+  .BLOCK_NAME__editor {
+    
+  }
+}

@@ -3,7 +3,7 @@ import {MediaUpload, MediaUploadCheck} from '@wordpress/block-editor';
 
 const ALLOWED_MEDIA_TYPES = ['image'];
 
-export function MyMediaUploader({onSelect, value, children}) {
+export default function({onSelect, value, children}) {
 	return (
 		<MediaUploadCheck>
 			<MediaUpload

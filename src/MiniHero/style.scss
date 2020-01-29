@@ -6,8 +6,8 @@
 //--------------------------------------------------------------
 // Shared Front-Back Styles
 //--------------------------------------------------------------
-.mini-hero-gallery__render,
-.mini-hero-gallery__editor {
+#mini-hero-gallery__render,
+#mini-hero-gallery__editor {
   .mini-hero-gallery__text {
     display: flex;
     flex: 1;
@@ -34,14 +34,14 @@
 //--------------------------------------------------------------
 // Mini-Hero-Gallery
 //--------------------------------------------------------------
-.mini-hero-gallery__render {
+#mini-hero-gallery__render {
   left: 50%;
-	margin-left: -50vw;
-	margin-right: -50vw;
-	position: relative;
-	right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  position: relative;
+  right: 50%;
   width: 100vw;
-  
+
   padding-top: 20px;
 }
 
@@ -93,8 +93,6 @@
   }
 
   //&__text {
-    // TODO: Design color selector that allows using colors primary, secondary, tertiary, from theme
+  // TODO: Design color selector that allows using colors primary, secondary, tertiary, from theme
   //}
-
 }
-

@@ -5,14 +5,12 @@
  * which makes it higher in priority.
  */
 
- .wp-admin {
-  .wp-block[data-type="jm-rblock/mini-hero-gallery"] {
+.wp-admin {
+  .wp-block[data-type='inetz/mini-hero-gallery'] {
     max-width: inherit;
   }
 
-
-
-  .mini-hero-gallery__editor {
+  #mini-hero-gallery__editor {
     h2 {
       margin: auto;
     }
@@ -23,7 +21,7 @@
         outline-offset: -40px;
       }
     }
-  
+
     .mini-hero-gallery__mini-hero .editor-rich-text.block-editor-rich-text {
       position: absolute;
       top: 0;

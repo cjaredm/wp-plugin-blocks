@@ -1,0 +1,110 @@
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
+//--------------------------------------------------------------
+// Shared Front-Back Hero
+//--------------------------------------------------------------
+#hero__editor,
+#hero__render {
+  display: flex;
+  width: 100%;
+
+  .hero__slide {
+    border-bottom-width: 10px;
+    border-bottom-style: solid;
+    width: inherit;
+  }
+}
+
+#hero__render {
+  margin: -20px 0 20px 0;
+  &.hero__full {
+    height: 45rem;
+  }
+  &.hero__half {
+    height: 23rem;
+  }
+  .hero__slide {
+    border-bottom-width: 10px;
+    border-bottom-style: solid;
+    width: inherit;
+  }
+}
+
+.hero__full,
+.hero__container.hero__full {
+  height: 45rem;
+}
+.hero__half,
+.hero__container.hero__half {
+  height: 23rem;
+}
+
+.hero__slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+
+  .hero__heading,
+  .hero__sub-heading {
+    line-height: 1 !important;
+  }
+}
+
+.hero__heading {
+  color: white !important;
+  font-size: rem-calc(50) !important;
+  font-family: $font-family-heading;
+  font-weight: $font-weight-extra-bold;
+  line-height: 1.1;
+  margin: 0 auto 20px !important;
+  max-width: 90%;
+  text-shadow: 0 0 9px rgba(black, 0.5);
+  z-index: 2;
+
+  @include mq($mq-global-width) {
+    font-size: rem-calc(72) !important;
+  }
+}
+
+.hero__sub-heading {
+  color: white;
+  font-size: 20px !important;
+  font-weight: $font-weight-normal;
+  line-height: 1.1;
+  margin: 0 auto 28px !important;
+  text-align: center;
+  text-shadow: 0 0 9px rgba(black, 0.5);
+  z-index: 2;
+
+  @include mq($mq-tablet) {
+    margin: 0 auto 28px;
+  }
+  @include mq($mq-laptop) {
+    font-size: 28px !important;
+  }
+  @include mq($mq-laptop-large) {
+    font-size: 32px !important;
+  }
+}
+
+//--------------------------------------------------------------
+// Hero
+//--------------------------------------------------------------
+#hero__render {
+  .hero__container {
+    left: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    position: relative;
+    right: 50%;
+    width: 100vw;
+  }
+}

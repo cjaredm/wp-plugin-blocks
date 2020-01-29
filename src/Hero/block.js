@@ -1,7 +1,8 @@
 /**
- * BLOCK: mini-hero-gallery
+ * BLOCK: hero
  */
-const blockName = 'mini-hero-gallery';
+// match above BLOCK name to this variable;
+const blockName = 'hero';
 import Edit from './Edit';
 import Save from './Save';
 const {__} = wp.i18n;
@@ -14,10 +15,16 @@ registerBlockType(`inetz/${blockName}`, {
   title: __(blockName),
   icon: 'admin-settings',
   category: 'common',
-  keywords: [__(blockName), __('hero'), __('gallery')],
+  keywords: [__('hero')],
   attributes: {
-    header: {type: 'string', default: ''},
-    images: {type: 'array', default: []},
+    heroSize: {type: 'string', default: 'full'},
+    backgroundColor: {type: 'string', default: 'secondary'},
+    img: {type: 'object', default: null},
+    heading: {type: 'string', default: null},
+    subHeading: {type: 'string', default: null},
+    btnLink: {type: 'string', default: null},
+    btnText: {type: 'string', default: null},
+    btnColor: {type: 'string', default: 'tertiary'},
   },
 
   edit: props => (
