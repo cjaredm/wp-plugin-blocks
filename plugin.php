@@ -1,10 +1,10 @@
 <?php
 /**
- * Plugin Name: JM - React Blocks
+ * Plugin Name: CJM - React WP Blocks
  * Plugin URI: https://github.com/ahmadawais/create-guten-block/
  * Description: Wordpress page building block suite created in React.
  * Author: Jared Mortenson
- * Author URI: https://inetz.com/
+ * Author URI: https://cjaredm.com/
  * Version: 1.0.0
  * License: GPL2+
  * License URI: https://www.gnu.org/licenses/gpl-2.0.txt
