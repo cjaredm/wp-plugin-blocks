@@ -1,0 +1,22 @@
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+
+.wp-admin {
+  // Inspector
+  .sidebar__global-settings {
+    margin: 10px 0;
+  }
+  .sidebar__remove-slide {
+    background-color: red;
+    color: white;
+    text-align: center;
+    border: 1px solid red;
+  }
+
+  .hero-slider__editor {
+  }
+}

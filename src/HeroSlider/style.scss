@@ -1,0 +1,118 @@
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
+//--------------------------------------------------------------
+// Shared Front-Back Hero-Slider
+//--------------------------------------------------------------
+.hero-slider__editor,
+.hero-slider__render {
+  display: flex;
+  overflow: hidden;
+}
+
+.hero-slider__container {
+  border-bottom-width: 10px;
+  border-bottom-style: solid;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  position: absolute;
+}
+
+.hero-slider__full,
+.hero-slider__container.hero-slider__full,
+.hero-slider__slide.hero-slider__full {
+  height: 45rem;
+}
+.hero-slider__half,
+.hero-slider__container.hero-slider__half,
+.hero-slider__slide.hero-slider__half {
+  height: 23rem;
+}
+
+.hero-slider__slide {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+
+  .hero-slider__heading,
+  .hero-slider__sub-heading {
+    line-height: 1 !important;
+  }
+}
+
+.hero-slider__heading {
+  color: white !important;
+  font-size: rem-calc(50) !important;
+  font-family: $font-family-heading;
+  font-weight: $font-weight-extra-bold;
+  line-height: 1.1;
+  margin: 0 auto 20px !important;
+  max-width: 90%;
+  text-shadow: 0 0 9px rgba(black, 0.5);
+  z-index: 2;
+
+  @include mq($mq-global-width) {
+    font-size: rem-calc(72) !important;
+  }
+}
+
+.hero-slider__sub-heading {
+  color: white;
+  font-size: 20px !important;
+  font-weight: $font-weight-normal;
+  line-height: 1.1;
+  margin: 0 auto 28px !important;
+  text-align: center;
+  text-shadow: 0 0 9px rgba(black, 0.5);
+  z-index: 2;
+
+  @include mq($mq-tablet) {
+    margin: 0 auto 28px;
+  }
+  @include mq($mq-laptop) {
+    font-size: 28px !important;
+  }
+  @include mq($mq-laptop-large) {
+    font-size: 32px !important;
+  }
+}
+
+//--------------------------------------------------------------
+// Hero-Slider
+//--------------------------------------------------------------
+.hero-slider__render {
+  .hero-slider__container {
+    left: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    position: relative;
+    right: 50%;
+    width: 100vw;
+  }
+}
+//-----------------------------------------
+// Slick Slider
+//-----------------------------------------
+.hero-slider {
+  &__link {
+    justify-self: center;
+    max-width: 250px;
+  }
+
+  &__image {
+    @include mq($mq-tablet, false) {
+      height: 480px;
+      object-fit: cover;
+    }
+  }
+}

@@ -1,0 +1,89 @@
+//--------------------------------------------------------------
+// SETTINGS
+//--------------------------------------------------------------
+
+//-----------------------------------------
+// Global
+//-----------------------------------------
+$global-width: 1180px;
+$global-padding: 20px;
+$global-radius: 5px;
+$global-spacing: 25px;
+
+//-----------------------------------------
+// Media Queries
+//-----------------------------------------
+$mq-mobile-medium: 375px;
+$mq-mobile-large: 425px;
+$mq-tablet: 768px;
+$mq-laptop: 1024px;
+$mq-global-width: $global-width;
+$mq-laptop-large: 1440px;
+
+//-----------------------------------------
+// Fonts
+//-----------------------------------------
+$font-open-sans: 'Open Sans', sans-serif;
+
+// Family
+$font-family-body: $font-open-sans;
+$font-family-heading: $font-open-sans;
+
+// Size
+$font-size-content: 21px;
+
+// Weight
+$font-weight-light: 300;
+$font-weight-normal: 400; // Open Sans
+$font-weight-medium: 500;
+$font-weight-semi-bold: 600; // Open Sans
+$font-weight-bold: 700; // Open Sans
+$font-weight-extra-bold: 800; // Open Sans
+$font-weight-black: 900;
+
+//--------------------------------------------------------------
+// MEDIA QUERY
+//
+// There are several ways you can use this mixin, but by default the mixin
+// assumes a min-width mq (see $width & $min options) so by using these
+// options as needed you can create a variety of different mqs to suit
+// your needs, EXAMPLE: @include mq(600px, false, false)
+// would be a mq of: (max-height: 600px)
+//
+// VARS:
+// $point - Breakpoint in pixels (ex: 768px). Options: retina, #px.
+// $width - If this is a width mq, if not, it's a height mq. Default: true. Options: true, false.
+// $min   - If this is a min-# mq, if not, it's a max-# mq. Default: true. Options: true, false.
+// $no-mq - Whether to output mq styles in @media wrapper or not. Var is set in parent stylesheets with $legacy.
+//--------------------------------------------------------------
+
+@mixin mq($point, $min: true, $width: true) {
+  // Width
+  @if $width {
+    // min-width
+    @if $min {
+      @media (min-width: $point) {
+        @content;
+      }
+    } @else {
+      // max-width
+      @media (max-width: $point - 1) {
+        @content;
+      }
+    }
+  } @else {
+    // Height
+
+    // min-height
+    @if $min {
+      @media (min-height: $point) {
+        @content;
+      }
+    } @else {
+      // max-height
+      @media (max-height: $point) {
+        @content;
+      }
+    }
+  }
+}
