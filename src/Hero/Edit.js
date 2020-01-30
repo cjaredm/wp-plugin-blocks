@@ -35,20 +35,18 @@ export default function(props) {
             style={{borderColor: backgroundColor}}
           >
             <div
-              className={`hero__slide hero__${heroSize} h-border-${backgroundColor}`}
+              class={`hero__slide hero__${heroSize} h-border-${backgroundColor}`}
               style={{
                 minHeight: 200,
                 backgroundImage: `url(${img.sizes.large.url})`,
               }}
             >
-              {heading && <h2 className={`hero__heading`}>{heading}</h2>}
-              {subHeading && (
-                <p className={`hero__sub-heading`}>{subHeading}</p>
-              )}
+              {heading && <h2 class={`hero__heading`}>{heading}</h2>}
+              {subHeading && <p class={`hero__sub-heading`}>{subHeading}</p>}
               {btnText && (
                 <a
                   href={btnLink}
-                  className={`button button--${btnColor} hero__link`}
+                  class={`button button--${btnColor} hero__link`}
                 >
                   {btnText}
                 </a>

@@ -5,9 +5,8 @@
  * which makes it higher in priority.
  */
 
- .wp-admin {
+.wp-admin {
   // change BLOCK_NAME to the actual block name
-  .BLOCK_NAME__editor {
-    
+  #BLOCK_NAME__editor {
   }
 }

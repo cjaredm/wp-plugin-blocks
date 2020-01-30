@@ -1,4 +1,4 @@
-// const React = wp.element;
+const React = wp.element;
 import {InlineEditor} from '../components/InlineEditor';
 
 export const REORDER = {

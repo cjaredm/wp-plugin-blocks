@@ -2,7 +2,7 @@
 yarn.lock
 package-lock.json
 node_modules
-src/.DS_Store
+**/.DS_Store
 .env.js
 
 ## Uncomment line below if you prefer to

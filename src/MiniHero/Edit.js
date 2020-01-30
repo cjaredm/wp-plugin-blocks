@@ -1,5 +1,5 @@
 // const React = wp.element;
-import MediaUploaderBtn from '../components/MediaUploaderBtn';
+import {MediaPlaceholder} from '@wordpress/block-editor';
 import {EditorImgWrapper, REORDER} from './EditorImgWrapper';
 import {InlineEditor} from '../components/InlineEditor';
 import Inspector from './Inspector';
@@ -53,14 +53,12 @@ export default function(props) {
         onOrderChange={onOrderChange}
       />
       {/* This is our toolbar under the wp-toolbar, add buttons and whatnot here */}
-      {isSelected && (
-        <MediaUploaderBtn onSelect={onImgSelect}>Add Image</MediaUploaderBtn>
-      )}
+      {isSelected && <MediaPlaceholder onSelect={onImgSelect} />}
 
       {/* This is where we mimic what is rendered while making it editable */}
       <div className="mini-hero-gallery">
         <InlineEditor
-          placeholder="Add Optional Header Here"
+          placeholder="Add Header Here"
           className="mini-hero-gallery__heading h-color-secondary"
           value={header}
           onChange={onHeaderChange}

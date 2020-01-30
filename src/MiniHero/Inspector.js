@@ -1,7 +1,7 @@
 // const React = wp.element;
 const {InspectorControls} = wp.editor;
 import {PanelBody, TextControl} from '@wordpress/components';
-import MediaUploaderBtn from '../components/MediaUploaderBtn';
+import {MediaPlaceholder} from '@wordpress/block-editor';
 import {REORDER} from './EditorImgWrapper';
 const {__} = wp.i18n;
 
@@ -15,7 +15,7 @@ export default function({
   return (
     <InspectorControls>
       <div className="sidebar__global-settings">
-        <MediaUploaderBtn onSelect={onImgSelect}>Add Image</MediaUploaderBtn>
+        {!Boolean(images.length) && <MediaPlaceholder onSelect={onImgSelect} />}
 
         {images.map((img, i) => (
           <PanelBody
@@ -56,7 +56,7 @@ export default function({
 
             <TextControl
               id="href"
-              label="Link Url (optional)"
+              label="Link Url"
               value={img.href}
               onChange={onImgPropChange(i)('href')}
             />
@@ -66,10 +66,36 @@ export default function({
               style={{backgroundColor: 'red', color: 'white', border: 0}}
               onClick={onDelete(i)}
             >
-              Remove
+              Remove Slide
             </button>
           </PanelBody>
         ))}
+
+        {/* {img ? (
+          <img src={img.sizes.thumbnail.url} />
+        ) : (
+          <MediaPlaceholder onSelect={onImgSelect} />
+        )}
+
+        <TextControl
+          id={__('heading')}
+          label="Heading"
+          value={heading}
+          onChange={onChange('heading')}
+        />
+
+        <Select
+          name="btnColor"
+          label="Button Color"
+          value={btnColor}
+          onChange={({target: {value}}) => onChange('btnColor')(value)}
+          options={[
+            ['primary', 'Primary'],
+            ['secondary', 'Secondary'],
+            ['tertiary', 'Tertiary'],
+          ]}
+        />
+        */}
       </div>
     </InspectorControls>
   );

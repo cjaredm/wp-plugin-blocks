@@ -1,6 +1,13 @@
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project.
+*/
+
 @import './scss/rem-calc';
 @import './scss/media_query';
-
+@import './components/Modal';
 // Colors.
 $color-black: rgb(41, 41, 41);
 $color-white: #f4f4f4;
@@ -13,5 +20,11 @@ $wp-blue: #007cba;
   margin-bottom: 8px;
   label {
     margin-bottom: 5px;
+  }
+}
+
+.sidebar__global-settings {
+  .components-base-control {
+    margin-bottom: 8px;
   }
 }
