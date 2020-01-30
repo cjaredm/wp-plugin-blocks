@@ -1,7 +1,17 @@
 @import './scss/rem-calc';
+@import './scss/media_query';
 
 // Colors.
 $color-black: rgb(41, 41, 41);
 $color-white: #f4f4f4;
 $gray: #dedede;
 $wp-blue: #007cba;
+
+.select-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+  label {
+    margin-bottom: 5px;
+  }
+}

@@ -1,6 +1,5 @@
 // const React = wp.element;
-const {InspectorControls} = wp.editor;
-import {MediaPlaceholder} from '@wordpress/block-editor';
+import {InspectorControls, MediaPlaceholder} from '@wordpress/block-editor';
 import {TextControl} from '@wordpress/components';
 import Select from '../components/Select';
 const {__} = wp.i18n;
@@ -39,7 +38,6 @@ export default function({
           label="Hero Size"
           value={heroSize}
           onChange={onAttrChange('heroSize')}
-          defaultValue="full"
           options={[
             ['full', 'Full'],
             ['half', 'Half'],
@@ -79,7 +77,7 @@ export default function({
           name="btnColor"
           label="Button Color"
           value={btnColor}
-          onChange={({target: {value}}) => onChange('btnColor')(value)}
+          onChange={onAttrChange('btnColor')}
           options={[
             ['primary', 'Primary'],
             ['secondary', 'Secondary'],

@@ -1,9 +1,7 @@
 {
-  "name": "cjm_react_wp_blocks",
+  "name": "inetz-wp-blocks",
   "author": "Jared Mortenson",
   "version": "1.0.0",
-  "url": "https://github.com/cjaredm/wp-plugin-blocks",
-  "email": "contact@cjaredm.com",
   "private": true,
   "scripts": {
     "start": "node scripts/start.js",
@@ -18,7 +16,6 @@
     "cgb-dev-utils": "^1.6.0",
     "cross-env": "^5.0.1",
     "cross-spawn": "^5.1.0",
-    "custom-env": "^1.0.2",
     "eslint": "^4.15.0",
     "eslint-config-wordpress": "^2.0.0",
     "eslint-plugin-jest": "^21.6.1",

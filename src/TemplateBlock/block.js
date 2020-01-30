@@ -3,6 +3,7 @@
  */
 // match above BLOCK name to this variable;
 const blockName = 'block-name-placeholder';
+import env from '../../.env.js';
 import Edit from './Edit';
 import Save from './Save';
 const {__} = wp.i18n;
@@ -11,7 +12,7 @@ import './editor.scss';
 import './style.scss';
 
 // Block Name MUST = 'name-space/blockName'
-registerBlockType(`${process.env.NAME_SPACE}/${blockName}`, {
+registerBlockType(`${env.NAME_SPACE}/${blockName}`, {
   title: __(blockName),
   icon: 'admin-settings',
   category: 'common',
@@ -24,14 +25,10 @@ registerBlockType(`${process.env.NAME_SPACE}/${blockName}`, {
     <Edit
       {...props}
       id={`${blockName}__editor`}
-      className={`${props.className} ${process.env.NAME_SPACE}-theme-styles-entry`}
+      className={`${props.className} ${env.NAME_SPACE}-theme-styles-entry`}
     />
   ),
   save: props => (
-    <Save
-      {...props}
-      id={`${blockName}__render`}
-      className={`${props.className} ${process.env.NAME_SPACE}-theme-styles-entry`}
-    />
+    <Save {...props} id={`${blockName}__render`} className={props.className} />
   ),
 });

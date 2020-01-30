@@ -1,16 +1,13 @@
-export default function({label, options, defaultValue, onChange, value}) {
+export default function({name, label, options, onChange, value}) {
+  const createKey = (a, b) => `${a}${b}`;
   return (
     <div className="select-wrapper">
-      <label htmlFor="btnColor">{label}</label>
-      <select
-        name="btnColor"
-        id="btnColor"
-        onChange={onChange}
-        value={value}
-        defaultValue={value || defaultValue}
-      >
+      <label htmlFor={name}>{label}</label>
+      <select name={name} id={name} onChange={onChange} value={value}>
         {options.map(([value, label]) => (
-          <option value={value}>{label}</option>
+          <option key={createKey(value, name)} value={value}>
+            {label}
+          </option>
         ))}
       </select>
     </div>

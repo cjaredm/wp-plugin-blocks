@@ -1,4 +1,4 @@
-const React = wp.element;
+// const React = wp.element;
 import {InlineEditor} from '../components/InlineEditor';
 
 export const REORDER = {
@@ -9,16 +9,7 @@ export const REORDER = {
 export function EditorImgWrapper({
   onChange,
   img: {content, href, position, length, ...img},
-  isSelected,
 }) {
-  const [isOpen, setIsOpen] = React.useState(false);
-  const toggleModal = () => setIsOpen(!isOpen);
-
-  React.useEffect(() => {
-    if (!isSelected) {
-      setIsOpen(false);
-    }
-  }, [isSelected]);
   return (
     <div className="mini-hero-gallery__mini-hero">
       <InlineEditor
