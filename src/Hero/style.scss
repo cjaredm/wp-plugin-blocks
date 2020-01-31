@@ -16,6 +16,20 @@
     border-bottom-style: solid;
     width: inherit;
   }
+
+  a.button--large {
+    width: 250px;
+    min-height: 80px;
+    white-space: pre-wrap;
+    font-size: 14px !important;
+    strong {
+      font-size: 20px;
+    }
+  }
+
+  .h-border-none {
+    box-shadow: inset 0 -11px 10px -15px #000;
+  }
 }
 
 #hero__render {
@@ -51,19 +65,19 @@
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
+  padding: 70px 50px;
 
   .hero__heading,
   .hero__sub-heading {
-    line-height: 1 !important;
+    max-width: $global-width;
   }
 }
 
 .hero__heading {
-  color: white !important;
   font-size: rem-calc(50) !important;
   font-family: $font-family-heading;
   font-weight: $font-weight-extra-bold;
-  line-height: 1.1;
+  line-height: 1 !important;
   margin: 0 auto 20px !important;
   max-width: 90%;
   text-shadow: 0 0 9px rgba(black, 0.5);
@@ -72,13 +86,23 @@
   @include mq($mq-global-width) {
     font-size: rem-calc(72) !important;
   }
+
+  &.hero__heading--normal {
+    font-size: rem-calc(25) !important;
+    font-weight: $font-weight-bold;
+    text-shadow: none;
+    margin-bottom: 0;
+
+    @include mq($mq-global-width) {
+      font-size: rem-calc(40) !important;
+    }
+  }
 }
 
 .hero__sub-heading {
-  color: white;
   font-size: 20px !important;
   font-weight: $font-weight-normal;
-  line-height: 1.1;
+  line-height: 1 !important;
   margin: 0 auto 28px !important;
   text-align: center;
   text-shadow: 0 0 9px rgba(black, 0.5);
@@ -92,6 +116,20 @@
   }
   @include mq($mq-laptop-large) {
     font-size: 32px !important;
+  }
+
+  &.hero__sub-heading--normal {
+    color: inherit;
+    text-shadow: none;
+    font-size: 1.25rem !important;
+  }
+}
+
+.hero_button-row {
+  display: flex;
+  justify-content: center;
+  .button:not(:first-child) {
+    margin-left: 15px;
   }
 }
 

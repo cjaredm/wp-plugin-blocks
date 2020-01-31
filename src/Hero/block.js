@@ -17,14 +17,17 @@ registerBlockType(`inetz/${blockName}`, {
   category: 'common',
   keywords: [__('hero')],
   attributes: {
-    heroSize: {type: 'string', default: 'half'},
-    backgroundColor: {type: 'string', default: 'secondary'},
+    backgroundType: {type: 'string', default: 'img'},
     img: {type: 'object', default: null},
+    backgroundColor: {type: 'string', default: 'secondary'},
+    heroSize: {type: 'string', default: 'half'},
+    isDefaultStyle: {type: 'boolean', default: true},
     heading: {type: 'string', default: null},
     subHeading: {type: 'string', default: null},
-    btnLink: {type: 'string', default: null},
-    btnText: {type: 'string', default: null},
-    btnColor: {type: 'string', default: 'tertiary'},
+    textColor: {type: 'string', default: 'white'},
+    buttons: {type: 'array', default: []},
+    isDefaultBtnStyle: {type: 'boolean', default: false},
+    dividerColor: {type: 'string', default: 'secondary'},
   },
 
   edit: props => (

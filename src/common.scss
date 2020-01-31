@@ -7,12 +7,19 @@
 
 @import './scss/rem-calc';
 @import './scss/media_query';
-@import './components/Modal';
 // Colors.
 $color-black: rgb(41, 41, 41);
 $color-white: #f4f4f4;
 $gray: #dedede;
 $wp-blue: #007cba;
+
+.h-color-white {
+  color: $color-white !important;
+}
+
+.h-color-black {
+  color: $color-black !important;
+}
 
 .select-wrapper {
   display: flex;
