@@ -6,122 +6,122 @@
  */
 
 .wp-admin {
-  .wp-block[data-type='inetz/mini-hero-gallery'] {
-    max-width: inherit;
-  }
+	.wp-block[data-type='cjm/mini-hero-gallery'] {
+		max-width: inherit;
+	}
 
-  #mini-hero-gallery__editor {
-    h2 {
-      margin: auto;
-    }
-    .editor-rich-text.block-editor-rich-text {
-      margin: 0;
-      h2:focus {
-        outline: 1px solid $wp-blue;
-        outline-offset: -40px;
-      }
-    }
+	#mini-hero-gallery__editor {
+		h2 {
+			margin: auto;
+		}
+		.editor-rich-text.block-editor-rich-text {
+			margin: 0;
+			h2:focus {
+				outline: 1px solid $wp-blue;
+				outline-offset: -40px;
+			}
+		}
 
-    .mini-hero-gallery__mini-hero .editor-rich-text.block-editor-rich-text {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
+		.mini-hero-gallery__mini-hero .editor-rich-text.block-editor-rich-text {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
 
-    .mini-hero-gallery__delete-hero {
-      position: absolute;
-      top: -10px;
-      right: -10px;
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      background-color: red;
-      color: white;
-      text-align: center;
-      font-size: 20px;
-      padding: 0;
-      border: 0 solid transparent;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      cursor: pointer;
-      z-index: 99;
-    }
+		.mini-hero-gallery__delete-hero {
+			position: absolute;
+			top: -10px;
+			right: -10px;
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			background-color: red;
+			color: white;
+			text-align: center;
+			font-size: 20px;
+			padding: 0;
+			border: 0 solid transparent;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			cursor: pointer;
+			z-index: 99;
+		}
 
-    .mini-hero-gallery__reorder-button {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: rem-calc(50);
-      z-index: 100;
-      border: none;
-      background: $wp-blue;
-      color: white;
-      width: 45px;
-      height: 45px;
-      border-radius: 50%;
-      font-weight: bold;
+		.mini-hero-gallery__reorder-button {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			font-size: rem-calc(50);
+			z-index: 100;
+			border: none;
+			background: $wp-blue;
+			color: white;
+			width: 45px;
+			height: 45px;
+			border-radius: 50%;
+			font-weight: bold;
 
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      cursor: pointer;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			cursor: pointer;
 
-      &--left {
-        left: -22px;
-      }
-      &--right {
-        right: -22px;
-      }
-    }
+			&--left {
+				left: -22px;
+			}
+			&--right {
+				right: -22px;
+			}
+		}
 
-    .mini-hero-gallery__open-modal {
-      @extend .mini-hero-gallery__reorder-button;
-      position: absolute;
-      left: 50%;
-      top: -23px;
-      transform: translateX(-50%);
-      font-size: 20px;
-    }
+		.mini-hero-gallery__open-modal {
+			@extend .mini-hero-gallery__reorder-button;
+			position: absolute;
+			left: 50%;
+			top: -23px;
+			transform: translateX(-50%);
+			font-size: 20px;
+		}
 
-    .mini-hero-gallery__link-modal {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      padding: 40px;
+		.mini-hero-gallery__link-modal {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			padding: 40px;
 
-      div {
-        position: relative;
-        padding: 20px;
-        background: white;
-        border-radius: 5px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        z-index: 101;
-      }
+			div {
+				position: relative;
+				padding: 20px;
+				background: white;
+				border-radius: 5px;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				z-index: 101;
+			}
 
-      input {
-        width: 100%;
-      }
+			input {
+				width: 100%;
+			}
 
-      &-toggle {
-        position: absolute;
-        top: -8px;
-        right: -3px;
-        font-size: 30px;
-        cursor: pointer;
-        z-index: 102;
+			&-toggle {
+				position: absolute;
+				top: -8px;
+				right: -3px;
+				font-size: 30px;
+				cursor: pointer;
+				z-index: 102;
 
-        border: none;
-        background: transparent;
-      }
-    }
-  }
+				border: none;
+				background: transparent;
+			}
+		}
+	}
 }

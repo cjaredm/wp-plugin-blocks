@@ -1,11 +1,11 @@
 <?php
 
 /**
- * Plugin Name: iNetz Blocks
- * Plugin URI: https://bitbucket.inetz.com/projects/DEV/repos/inetz-wp-blocks/browse
- * Description: Wordpress page building block suite created by iNetz in React.
+ * Plugin Name: CJM Blocks
+ * Plugin URI: https://github.com/cjaredm/wp-plugin-blocks
+ * Description: Wordpress page building block suite created by CJM in React.
  * Author: Jared Mortenson
- * Author URI: https://inetz.com/
+ * Author URI: https://cjaredm.com/
  * Version: 1.0.0
  * License: GPL2+
  * License URI: https://www.gnu.org/licenses/gpl-2.0.txt
