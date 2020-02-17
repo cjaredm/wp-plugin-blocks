@@ -1,3 +1,4 @@
+/* eslint-disable object-curly-spacing */
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {BG_TYPES} from './BackgroundPicker';
 
@@ -37,18 +38,14 @@ export default function({
   },
 }) {
   return (
-    <div
-      id={id}
-      className={`${className} hero__${heroSize}`}
-      style={{position: 'relative'}}
-    >
+    <div id={id} className={`${className} hero__${heroSize} full-width`} style={{position: 'relative'}}>
       <div
-        className={`hero__container hero__${heroSize} h-background-${backgroundColor ||
-          dividerColor}`}
+        className={`hero__container hero__${heroSize} has-${backgroundColor ||
+          dividerColor}-background-color has-${backgroundColor || dividerColor}-border-color`}
         style={{borderColor: backgroundColor || dividerColor}}
       >
         <div
-          class={`hero__slide hero__${heroSize} h-border-${dividerColor}`}
+          className={`hero__slide hero__${heroSize} has-${dividerColor}-border-color`}
           style={{
             borderBottomWidth: dividerColor === 'none' ? 0 : '10px',
             minHeight: 300,
@@ -56,17 +53,13 @@ export default function({
           }}
         >
           {heading && (
-            <h2
-              class={`hero__heading  h-color-${textColor} ${
-                isDefaultStyle ? '' : 'hero__heading--normal'
-              }`}
-            >
+            <h2 className={`hero__heading  has-${textColor}-color ${isDefaultStyle ? '' : 'hero__heading--normal'}`}>
               {heading}
             </h2>
           )}
           {subHeading && (
             <p
-              class={`hero__sub-heading h-color-${textColor} ${
+              className={`hero__sub-heading has-${textColor}-color ${
                 isDefaultStyle ? '' : 'hero__sub-heading--normal'
               }`}
             >
@@ -83,9 +76,7 @@ export default function({
                   <a
                     key={btn.id}
                     href={btn.link}
-                    class={`button button--${btn.color} hero__link ${
-                      isDefaultBtnStyle ? 'button--large' : ''
-                    }`}
+                    className={`button button-fill-${btn.color} hero__link ${isDefaultBtnStyle ? 'button--large' : ''}`}
                   >
                     <span>{btnTextArr}</span>
                   </a>

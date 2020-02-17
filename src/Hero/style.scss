@@ -9,7 +9,6 @@
 #hero__editor,
 #hero__render {
   display: flex;
-  width: 100%;
 
   .hero__slide {
     border-bottom-width: 10px;
@@ -33,12 +32,12 @@
 }
 
 #hero__render {
-  margin: -20px 0 20px 0;
+  margin-bottom: 20px;
   &.hero__full {
-    height: 45rem;
+    height: 450px;
   }
   &.hero__half {
-    height: 23rem;
+    height: 300px;
   }
   .hero__slide {
     border-bottom-width: 10px;
@@ -47,13 +46,8 @@
   }
 }
 
-.hero__full,
-.hero__container.hero__full {
-  height: 45rem;
-}
-.hero__half,
-.hero__container.hero__half {
-  height: 23rem;
+.hero__container {
+  display: flex;
 }
 
 .hero__slide {

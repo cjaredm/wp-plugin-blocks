@@ -1,25 +1,20 @@
-/**
- * #.# Common SCSS
- *
- * Can include things like variables and mixins
- * that are used across the project.
-*/
-
 @import './scss/rem-calc';
 @import './scss/media_query';
+
+.full-width {
+  left: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  position: relative;
+  right: 50%;
+  width: 100vw;
+}
+
 // Colors.
 $color-black: rgb(41, 41, 41);
 $color-white: #f4f4f4;
 $gray: #dedede;
 $wp-blue: #007cba;
-
-.h-color-white {
-  color: $color-white !important;
-}
-
-.h-color-black {
-  color: $color-black !important;
-}
 
 .select-wrapper {
   display: flex;
