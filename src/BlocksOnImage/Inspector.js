@@ -1,5 +1,5 @@
 // const React = wp.element;
-const {InspectorControls} = wp.editor;
+const {InspectorControls} = wp.blockEditor;
 import BackgroundPicker from '../components/BackgroundPicker';
 import {SelectControl, PanelBody, RangeControl} from '@wordpress/components';
 

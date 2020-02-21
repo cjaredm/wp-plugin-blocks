@@ -12,10 +12,16 @@
   }
 
   #blocks-on-image__editor {
-    .is-selected,
-    .has-child-selected {
+    .block-editor-inner-blocks
+      .wp-block:nth-last-child(2)[data-type='core/paragraph']
+      .block-editor-block-list__insertion-point-inserter {
+      opacity: 1 !important;
+    }
+
+    .wp-block:hover {
       background-color: white;
     }
+
     .blocks-on-image__container {
       left: 50%;
       margin-left: -35vw;

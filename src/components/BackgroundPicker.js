@@ -54,10 +54,7 @@ function Options({
               <img src={img.sizes.thumbnail.url} />
             </div>
           ) : (
-            <MediaPlaceholder
-              onSelect={img => setAttributes({img})}
-              value={img}
-            />
+            <MediaPlaceholder onSelect={img => setAttributes({img})} />
           )}
         </Fragment>
       );

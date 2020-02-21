@@ -1,4 +1,4 @@
-const {InnerBlocks} = wp.editor;
+const {InnerBlocks} = wp.blockEditor;
 import {BG_TYPES} from '../components/BackgroundPicker';
 
 function getBackgroundStyles(type, img) {
@@ -25,7 +25,6 @@ export default function({
   className,
   attributes: {backgroundType, backgroundColor, size, img, opacity},
 }) {
-  console.log(opacity);
   return (
     img && (
       <div
