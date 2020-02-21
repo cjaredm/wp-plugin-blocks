@@ -19,9 +19,20 @@ This project was bootstrapped with [Create Guten Block](https://github.com/ahmad
 - Use to build production code for your block inside `dist` folder.
 - Runs once and reports back the gzip file sizes of the produced code.
 
-## Frontend Expectations
+## Theme Expectations
+### Inject Frontend Styles to Plugin Class Entry
+admin.scss
+```scss
+// admin.scss
+.inetz-theme-styles-entry {
+  @import '../helpers/helpers';
+  @import '../components/buttons';
+  @import '../mixins/media-query';
+  @import '../settings/settings';
+}
+```
 
-Classes setting colors for background, border, and color
+### Classes setting colors for background, border, and color
 
 ```scss
 // helpers

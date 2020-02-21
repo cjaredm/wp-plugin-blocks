@@ -1,5 +1,7 @@
 const {Fragment} = wp.element;
-import {MediaPlaceholder} from '@wordpress/block-editor';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faPencilAlt} from '@fortawesome/free-solid-svg-icons';
+import {MediaPlaceholder, MediaUpload} from '@wordpress/block-editor';
 import {SelectControl} from '@wordpress/components';
 
 export const BG_TYPES = {
@@ -12,7 +14,7 @@ export default function(props) {
   return (
     <Fragment>
       <SelectControl
-        label="Backgroup Type"
+        label="Background Type"
         value={props.attributes.backgroundType}
         onChange={props.onChange('backgroundType')}
         options={[
@@ -35,9 +37,27 @@ function Options({
       return (
         <Fragment>
           {img ? (
-            <img src={img.sizes.thumbnail.url} />
+            <div className="current-media-wrapper">
+              <MediaUpload
+                onSelect={img => setAttributes({img})}
+                value={img.id}
+                render={({open}) => (
+                  <span className="edit-icon">
+                    <FontAwesomeIcon
+                      onClick={open}
+                      size="lg"
+                      icon={faPencilAlt}
+                    />
+                  </span>
+                )}
+              />
+              <img src={img.sizes.thumbnail.url} />
+            </div>
           ) : (
-            <MediaPlaceholder onSelect={img => setAttributes({img})} />
+            <MediaPlaceholder
+              onSelect={img => setAttributes({img})}
+              value={img}
+            />
           )}
         </Fragment>
       );

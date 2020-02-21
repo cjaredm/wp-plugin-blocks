@@ -1,7 +1,6 @@
 import './MiniHero/block.js';
 import './Hero/block.js';
-// import './HeroSlider/block.js';
-// import './ThemedButtonLink/block.js';
+import './BlocksOnImage/block.js';
 
 // This is how you unregister blocks from the editor.
 // wp.domReady(() => {

@@ -1,6 +1,6 @@
 // const React = wp.element;
 const {InspectorControls} = wp.editor;
-import BackgroundPicker from './BackgroundPicker';
+import BackgroundPicker from '../components/BackgroundPicker';
 import ButtonSettings from './ButtonSettings';
 import {
   TextControl,

@@ -1,0 +1,37 @@
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+
+.wp-admin {
+  // Inspector
+  .sidebar__global-settings {
+    margin: 10px 0;
+  }
+
+  #blocks-on-image__editor {
+    .is-selected,
+    .has-child-selected {
+      background-color: white;
+    }
+    .blocks-on-image__container {
+      left: 50%;
+      margin-left: -35vw;
+      margin-right: -35vw;
+      position: relative;
+      right: 50%;
+      width: 70vw;
+    }
+
+    .blocks-on-image__slide {
+      display: flex;
+      width: inherit;
+    }
+  }
+
+  .blocks-on-image__slide {
+    flex: 1;
+  }
+}

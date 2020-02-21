@@ -1,0 +1,57 @@
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
+
+#blocks-on-image__render {
+  // Bust out of the post container and go full width
+  .blocks-on-image__container {
+    left: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    position: relative;
+    right: 50%;
+    width: 100vw;
+  }
+}
+
+//--------------------------------------------------------------
+// Shared Front-Back Hero
+//--------------------------------------------------------------
+#blocks-on-image__editor,
+#blocks-on-image__render {
+  display: flex;
+  width: 100%;
+  margin: 0;
+
+  &.blocks-on-image__full {
+    height: 45rem;
+  }
+  &.blocks-on-image__half {
+    height: 23rem;
+  }
+}
+
+.blocks-on-image__slide {
+  width: inherit;
+}
+
+.blocks-on-image__full,
+.blocks-on-image__container.blocks-on-image__full {
+  height: 45rem;
+}
+.blocks-on-image__half,
+.blocks-on-image__container.blocks-on-image__half {
+  height: 23rem;
+}
+
+.blocks-on-image__slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 40px 20px;
+}

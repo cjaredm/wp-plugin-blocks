@@ -1,6 +1,6 @@
 /* eslint-disable object-curly-spacing */
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {BG_TYPES} from './BackgroundPicker';
+import {BG_TYPES} from '../components/BackgroundPicker';
 
 function getBackgroundStyles(type, img) {
   const backgroundImage = img ? `url(${img.sizes.full.url})` : '';
@@ -38,10 +38,15 @@ export default function({
   },
 }) {
   return (
-    <div id={id} className={`${className} hero__${heroSize} full-width`} style={{position: 'relative'}}>
+    <div
+      id={id}
+      className={`${className} hero__${heroSize} full-width`}
+      style={{position: 'relative'}}
+    >
       <div
         className={`hero__container hero__${heroSize} has-${backgroundColor ||
-          dividerColor}-background-color has-${backgroundColor || dividerColor}-border-color`}
+          dividerColor}-background-color has-${backgroundColor ||
+          dividerColor}-border-color`}
         style={{borderColor: backgroundColor || dividerColor}}
       >
         <div
@@ -53,7 +58,11 @@ export default function({
           }}
         >
           {heading && (
-            <h2 className={`hero__heading  has-${textColor}-color ${isDefaultStyle ? '' : 'hero__heading--normal'}`}>
+            <h2
+              className={`hero__heading  has-${textColor}-color ${
+                isDefaultStyle ? '' : 'hero__heading--normal'
+              }`}
+            >
               {heading}
             </h2>
           )}
@@ -76,7 +85,9 @@ export default function({
                   <a
                     key={btn.id}
                     href={btn.link}
-                    className={`button button-fill-${btn.color} hero__link ${isDefaultBtnStyle ? 'button--large' : ''}`}
+                    className={`button button-fill-${btn.color} hero__link ${
+                      isDefaultBtnStyle ? 'button--large' : ''
+                    }`}
                   >
                     <span>{btnTextArr}</span>
                   </a>

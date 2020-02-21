@@ -2,7 +2,7 @@ const React = wp.element;
 import Inspector from './Inspector';
 import Save from './Save';
 import {MediaPlaceholder} from '@wordpress/block-editor';
-import {BG_TYPES} from './BackgroundPicker';
+import {BG_TYPES} from '../components/BackgroundPicker';
 // const {__} = wp.i18n;
 
 export default function(props) {
