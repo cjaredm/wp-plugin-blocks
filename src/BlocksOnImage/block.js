@@ -21,7 +21,6 @@ registerBlockType(`${env.NAME_SPACE}/${blockName}`, {
     backgroundType: {type: 'string', default: 'img'},
     img: {type: 'object', default: null},
     backgroundColor: {type: 'string', default: 'secondary'},
-    size: {type: 'string', default: 'half'},
     opacity: {type: 'number', default: 5},
   },
 

@@ -23,28 +23,29 @@ export default function({
   id,
   render,
   className,
-  attributes: {backgroundType, backgroundColor, size, img, opacity},
+  isSelected,
+  attributes: {backgroundType, backgroundColor, img, opacity},
+  ...props
 }) {
+  console.log(props);
   return (
     img && (
-      <div
-        id={id}
-        className={`${className} blocks-on-image__${size}`}
-        style={{position: 'relative'}}
-      >
+      <div id={id} className={`${className}`} style={{position: 'relative'}}>
         <div
-          className={`blocks-on-image__container blocks-on-image__${size} h-background-${backgroundColor}`}
+          className={`blocks-on-image__container h-background-${backgroundColor}`}
+          style={{
+            minHeight: 300,
+            ...getBackgroundStyles(backgroundType, img),
+          }}
         >
           <div
             className="overlay"
-            style={{backgroundColor: `rgba(0,0,0, 0.${100 - (100 - opacity)}`}}
+            style={{backgroundColor: `rgba(0,0,0, 0.${100 - (100 - opacity)})`}}
           />
           <div
-            className={`blocks-on-image__slide blocks-on-image__${size}`}
-            style={{
-              minHeight: 300,
-              ...getBackgroundStyles(backgroundType, img),
-            }}
+            className={`blocks-on-image__slide ${
+              isSelected ? 'inner-blocks-is-selected' : ''
+            }`}
           >
             {render ? <InnerBlocks.Content /> : <InnerBlocks />}
           </div>

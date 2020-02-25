@@ -25,11 +25,14 @@
   width: 100%;
   margin: 0;
 
-  &.blocks-on-image__full {
-    height: 45rem;
+  .blocks-on-image__container {
+    z-index: 0;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
-  &.blocks-on-image__half {
-    height: 23rem;
+  .overlay {
+    z-index: -1;
   }
 }
 
@@ -50,8 +53,10 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 40px 20px;
+  padding: 60px;
+  z-index: 10;
+
+  @include mq(765px) {
+    padding: 60px 100px;
+  }
 }
